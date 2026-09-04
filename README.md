@@ -8,6 +8,7 @@ The flake builds:
 - `volt`
 - `volt-probe`
 - the volt-gui interface
+- the Vulkan manifest, desktop entry, and icon
 
 ## Installation
 
