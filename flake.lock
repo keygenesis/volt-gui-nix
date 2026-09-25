@@ -25,11 +25,11 @@
     "volt-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1788426368,
-        "narHash": "sha256-KUne5KbziyADVtVSWBagOv0pes91Phmb6b5tpLafjOY=",
+        "lastModified": 1790052028,
+        "narHash": "sha256-shtJ4489PlFJo15qd2nwFfuG0lFa9TdWTbFmddkCnoo=",
         "owner": "pythonlover02",
         "repo": "volt-gui",
-        "rev": "16e8e78b15d2a210257c3f23cb394b9b797da987",
+        "rev": "d2ca878472dded58ea169340e2f83885f397c9a1",
         "type": "github"
       },
       "original": {

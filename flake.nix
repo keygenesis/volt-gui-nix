@@ -133,10 +133,10 @@
             $out/share/vulkan/implicit_layer.d/VkLayer_volt.json
 
           mkdir -p $out/share/volt-gui
-          cp -r volt-gui/. $out/share/volt-gui/
+          cp -r src/volt-gui/. $out/share/volt-gui/
 
           install -Dm644 \
-            images/1.png \
+            images/icon.png \
             $out/share/icons/hicolor/256x256/apps/volt-gui.png
 
           mkdir -p $out/share/applications
@@ -166,7 +166,11 @@
           # ash loads libvulkan dynamically.
           makeWrapper ${volt64}/bin/volt-probe $out/bin/volt-probe \
             --prefix LD_LIBRARY_PATH : \
-              "${lib.makeLibraryPath [ pkgs.vulkan-loader ]}"
+              "${lib.makeLibraryPath [
+                pkgs.vulkan-loader
+                pkgs.libxcb
+                pkgs.wayland
+              ]}"
 
           makeWrapper ${pythonEnv}/bin/python $out/bin/volt-gui \
             ''${qtWrapperArgs[@]} \
